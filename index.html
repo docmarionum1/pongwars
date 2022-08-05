@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pongwars!</title>
+	<style type="text/css">
+		html,body {
+			background-color: #333;
+			color: #fff;
+			font-family: helvetica, arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			font-size: 12pt;
+		}
+		
+		#wrapper {
+			height:480px;
+			width: 1080px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+		}
+		
+		#canvas {
+			float: left;
+			margin-bottom: 50px;
+		}
+		
+		#p0 {
+			float: left;
+			margin-right: 25px;
+		}
+		
+		#p1 {
+			float: left;
+			margin-left: 25px;
+		}
+		
+		/*#p1 {
+			position:absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			width: 200px;
+		}*/
+	</style>
+
+	<!--<script type="text/javascript" src="lib/impact/impact.js"></script>
+	<script type="text/javascript" src="lib/game/main.js"></script>-->
+	<script type="text/javascript" src="game.min.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="p0">
+			Player 0:<br/>
+			W/S: move up and down<br/>
+			D: summon attackers <br/>
+			A: summon defenders <br/>
+			Space: summon miners <br/>
+		</div>
+			
+		<canvas id="canvas"></canvas>
+		
+		<div id="p1">
+			Player 1:<br/>
+			Up/Down<br/>
+			Left: summon attackers <br/>
+			Right: summon defenders <br/>
+			Shift: summon miners <br/>
+		</div>
+		
+		<div style="clear: both;"></div>
+		
+		<div>A game for two players.  Each player starts with a score of 10, which is also the resources they have.  The goal of the game is to either reach 25 points or destroy the opponent's paddle.  Points are scored by getting the ball past the opponent.  Attackers can be summoned to attack the opponent's paddle.  As the paddle gets attacked, it slowly disintegrates piece by piece.  Defenders can be summoned to defend your own paddle from the opponent's attackers.  Miners can be summoned to mine resources from the opponent's score into your own.</div>
+	</div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-4070834-8', 'jeremyneiman.com');
+      ga('send', 'pageview');
+
+    </script>
+</body>
+</html>
